@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule "index.html" "index.php"
+RewriteRule "^([a-zA-Z0-9_]+)$" "?components=$1"
+RewriteRule "/admin/^([a-zA-Z0-9]+)$" "/admin/?components=$1"
+RewriteRule "^([a-zA-Z0-9_]+)/([a-zA-Z0-9_]+)$" "?components=$1&action=$2"
+
+
+RewriteRule "api/([a-zA-Z0-9]+)/([a-zA-Z0-9_]+)$" "?components=api&action=$1&action2=$2"
+
+
